@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <h1 align="center">CARD MAKER</h1>
+<p align="center">An Online Card Creator Tool</p>
+<hr>
+
+<div class="main">
+
+    <!-- Left -->
+    <div id="left" class="p-5">
+
+        <h3 align="center">TYPE YOUR INFORMATION</h3>
+        <br><br>
+
+        <div id="left-main">
+
+            Name:<br>
+            <input type="text" placeholder="Enter Name" class="form-control w-75 bg-dark text-light" id="one">
+
+            <br><br>
+
+            Mobile No.:<br>
+            <input type="text" placeholder="Enter Mobile" class="form-control w-75 bg-dark text-light" id="two">
+
+            <br><br>
+
+            Alternate Mobile No.:<br>
+            <input type="text" placeholder="Enter Mobile" class="form-control w-75 bg-dark text-light" id="three">
+
+            <br><br>
+
+            S/O , W/O , D/O:<br>
+            <input type="text" placeholder="Father Name" class="form-control w-75 bg-dark text-light" id="four">
+
+            <br><br>
+
+            Email:<br>
+            <input type="text" placeholder="Email" class="form-control w-75 bg-dark text-light" id="five">
+
+            <br><br>
+
+            Address:<br>
+
+            <textarea id="address" rows="6" class="form-control w-75 bg-dark text-light"></textarea>
+
+            <br><br>
+
+            <button class="btn btn-warning make-btn w-50" onclick="make()">MAKE</button>
+
+        </div>
+
+    </div>
+
+    <!-- Right -->
+
+    <div class="right-side">
+
+        <div id="right" class="border border-3 border-light p-2 rounded">
+
+            <div id="number">
+                <p id="num-1"></p>
+                <p id="num-2"></p>
+            </div>
+
+            <div class="name">
+                <h2 id="name-1"></h2>
+            </div>
+
+            <div class="infor p-2">
+                <p id="f-name"></p>
+                <p id="mail"></p>
+                <p id="addr"></p>
+            </div>
+
+        </div>
+
+        <div id="card_pri">
+
+            <button class="btn btn-outline-warning action-btn" onclick="print()">PRINT</button>
+
+            <button class="btn btn-outline-warning action-btn" onclick="font()">FONT</button>
+
+            <button class="btn btn-outline-warning action-btn" onclick="bold()">BOLD</button>
+
+            <button class="btn btn-outline-warning action-btn" onclick="undo()">UNDO</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="scr.js">
+
+</script>
+</body>
+</html>
