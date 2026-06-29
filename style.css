@@ -47,8 +47,14 @@ hr{
     background:url(img/card.jpg);
     background-size:cover;
     background-repeat:no-repeat;
-
+    /* border: 1px solid red  !important; */
     overflow:hidden;
+}
+
+.right-side{
+    border: 1px solid red  !important;
+    margin-top: 140px;
+
 }
 
 #number p{
@@ -112,6 +118,17 @@ flex-direction:column;
     align-items: center;
     flex-direction: column;
 }
+
+
+#left-main input{
+    /* border: 1px solid red; */
+    width: 100% !important;
+}
+
+#left-main textarea{
+    width: 100% !important;
+}
+
 
 #left,
 .right-side{
