@@ -1,172 +1,209 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    color:white;
-    font-family:sans-serif;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: sans-serif;
 }
 
-body{
-    background:url(img/page_bg2.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
+body {
+    background: url(img/page_bg2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
-hr{
-    border:2px solid white;
+hr {
+    border: 2px solid white;
 }
 
-.main{
-    display:flex;
-    justify-content:space-between;
-    align-items:flex-start;
-    gap:40px;
-    padding:40px;
-    flex-wrap:wrap;
+.main {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    padding: 40px;
+    flex-wrap: wrap;
 }
 
-#left{
-    flex:1;
-    min-width:350px;
+#left {
+    flex: 1;
+    min-width: 350px;
 }
 
-.right-side{
-    flex:1;
-    min-width:350px;
+.right-side {
+    flex: 1;
+    min-width: 350px;
 }
 
-.make-btn{
-    margin-left:0;
+.make-btn {
+    margin-left: 0;
 }
 
-#right{
+#right {
 
-    width:100%;
-    min-height:350px;
+    width: 100%;
+    min-height: 350px;
 
-    background:url(img/card.jpg);
-    background-size:cover;
-    background-repeat:no-repeat;
+    background: url(img/card.jpg) center;
+    background-size: cover;
+    background-repeat: no-repeat;
     /* border: 1px solid red  !important; */
-    overflow:hidden;
+    overflow: hidden;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
 }
 
-.right-side{
-    border: 1px solid red  !important;
+.right-side {
+    border: 1px solid red !important;
     margin-top: 140px;
 
 }
 
-#number p{
+#number p {
 
-    color:red !important;
-    text-align:right;
-    margin-right:20px;
-
-}
-
-.name h2{
-
-    color:yellow;
-    margin-left:30px;
-    font-weight:bold;
+    color: red !important;
+    text-align: right;
+    margin-right: 20px;
 
 }
 
-.infor p{
+.name h2 {
 
-    margin-left:30px;
-    width:85%;
-    word-break:break-word;
-
-}
-
-#card_pri{
-
-    width:100%;
-    display:flex;
-    justify-content:space-evenly;
-    align-items:center;
-
-    padding:10px;
-
-    border-left:3px solid white;
-    border-right:3px solid white;
-    border-bottom:3px solid white;
+    color: yellow;
+    margin-left: 30px;
+    font-weight: bold;
 
 }
 
-.action-btn{
+.infor p {
 
-    margin:0;
-    width:22%;
-
-}
-
-@media(max-width:768px){
-
-.main{
-
-flex-direction:column;
+    margin-left: 30px;
+    width: 85%;
+    word-break: break-word;
 
 }
 
-#left-main{
-    /* border: 1px solid red; */
+#card_pri {
+
+    width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    flex-direction: column;
-}
 
+    padding: 10px;
 
-#left-main input{
-    /* border: 1px solid red; */
-    width: 100% !important;
-}
-
-#left-main textarea{
-    width: 100% !important;
-}
-
-
-#left,
-.right-side{
-
-width:100%;
+    border-left: 3px solid white;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
 
 }
 
-#right{
+.action-btn {
 
-min-height:320px;
-
-}
-
-.make-btn{
-
-width:100% !important;
+    margin: 0;
+    width: 22%;
 
 }
 
-.action-btn{
+@media(max-width:768px) {
 
-font-size:12px;
-width:23%;
+    .main {
+
+        flex-direction: column;
+
+    }
+
+    #left-main {
+        /* border: 1px solid red; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+
+    #left-main input {
+        /* border: 1px solid red; */
+        width: 100% !important;
+    }
+
+    #left-main textarea {
+        width: 100% !important;
+    }
+
+
+    #left,
+    .right-side {
+
+        width: 100%;
+
+    }
+
+    #right {
+
+        min-height: 320px;
+
+    }
+
+    .make-btn {
+
+        width: 100% !important;
+
+    }
+
+    .action-btn {
+
+        font-size: 12px;
+        width: 23%;
+
+    }
+
+    .name h2 {
+
+        font-size: 28px;
+
+    }
+
+    .infor p {
+
+        width: 90%;
+
+    }
 
 }
 
-.name h2{
+@media print {
 
-font-size:28px;
+    @media print {
+
+        body * {
+            visibility: hidden;
+        }
+
+        #right,
+        #right * {
+            visibility: visible;
+        }
+
+        #right {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            border: none !important;
+
+            -webkit-print-color-adjust: exact;
+            print-color-adjust: exact;
+        }
+
+        #card_pri {
+            display: none;
+        }
+
+    }
 
 }
 
-.infor p{
-
-width:90%;
-
+@page {
+    margin: 0;
 }
-
-}
-
